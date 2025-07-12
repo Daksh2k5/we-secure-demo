@@ -5,46 +5,59 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/callerbackground"
+    android:background="@drawable/sa"
     tools:context=".FakeCallSend">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="118dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/circlebackground"
+        android:src="@drawable/profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobilenoend" />
 
     <FrameLayout
         android:layout_width="365dp"
         android:layout_height="396dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/callcontrolbackground" />
 
         <FrameLayout
-            android:layout_width="76dp"
-            android:layout_height="85dp"
+            android:layout_width="66dp"
+            android:layout_height="70dp"
             android:layout_marginLeft="140dp"
             android:layout_marginTop="290dp">
 
             <Button
-                android:id="@+id/callend"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:id="@+id/callendbutton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:text="Button" />
 
             <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/redcirclebackground" />
+                android:id="@+id/redbg"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/whitecirclebackground" />
 
             <ImageView
-                android:id="@+id/imageView4"
+                android:id="@+id/callendic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="centerCrop"
                 android:onClick="OpenMainActivity"
-                app:srcCompat="@drawable/callend" />
+                app:srcCompat="@drawable/vce" />
         </FrameLayout>
 
         <LinearLayout
@@ -64,7 +77,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="62dp"
-                    app:srcCompat="@drawable/plus" />
+                    app:srcCompat="@drawable/sp" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -73,7 +86,8 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="70dp"
                     android:gravity="center"
-                    android:text="Add call" />
+                    android:text="Add call"
+                    android:textColor="@color/white" />
             </FrameLayout>
 
             <FrameLayout
@@ -83,9 +97,9 @@
 
                 <ImageView
                     android:id="@+id/imageView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="63dp"
-                    app:srcCompat="@drawable/videocall" />
+                    android:layout_width="96dp"
+                    android:layout_height="77dp"
+                    app:srcCompat="@drawable/svc" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -93,7 +107,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="70dp"
-                    android:text="Video call" />
+                    android:text="Video call"
+                    android:textColor="@color/white" />
             </FrameLayout>
 
             <FrameLayout
@@ -105,7 +120,7 @@
                     android:id="@+id/imageView6"
                     android:layout_width="match_parent"
                     android:layout_height="61dp"
-                    app:srcCompat="@drawable/bluetooth" />
+                    app:srcCompat="@drawable/sb" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -113,7 +128,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="70dp"
-                    android:text="Bluetooth" />
+                    android:text="Bluetooth"
+                    android:textColor="@color/white" />
             </FrameLayout>
         </LinearLayout>
 
@@ -132,7 +148,7 @@
                     android:id="@+id/imageView8"
                     android:layout_width="match_parent"
                     android:layout_height="52dp"
-                    app:srcCompat="@drawable/speaker" />
+                    app:srcCompat="@drawable/ss" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -141,7 +157,8 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="55dp"
                     android:gravity="center"
-                    android:text="Speaker" />
+                    android:text="Speaker"
+                    android:textColor="@color/white" />
             </FrameLayout>
 
             <FrameLayout
@@ -153,8 +170,8 @@
                 <ImageView
                     android:id="@+id/imageView7"
                     android:layout_width="match_parent"
-                    android:layout_height="47dp"
-                    app:srcCompat="@drawable/mute" />
+                    android:layout_height="57dp"
+                    app:srcCompat="@drawable/sm" />
 
                 <TextView
                     android:id="@+id/textView8"
@@ -163,7 +180,8 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="55dp"
                     android:gravity="center"
-                    android:text="Mute" />
+                    android:text="Mute"
+                    android:textColor="@color/white" />
             </FrameLayout>
 
             <FrameLayout
@@ -178,13 +196,14 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="55dp"
                     android:gravity="center"
-                    android:text="Keypad" />
+                    android:text="Keypad"
+                    android:textColor="@color/white" />
 
                 <ImageView
                     android:id="@+id/imageView9"
                     android:layout_width="match_parent"
                     android:layout_height="54dp"
-                    app:srcCompat="@drawable/keypad" />
+                    app:srcCompat="@drawable/sk" />
             </FrameLayout>
         </LinearLayout>
 
@@ -194,9 +213,10 @@
         android:id="@+id/callernameend"
         android:layout_width="201dp"
         android:layout_height="30dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="36dp"
         android:gravity="center"
         android:text="Prince"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/timerTextView" />
@@ -206,11 +226,12 @@
         android:layout_width="76dp"
         android:layout_height="27dp"
         android:layout_marginTop="56dp"
+        android:fontFamily="monospace"
         android:gravity="center"
         android:text="00:00"
+        android:textColor="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:fontFamily="monospace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -223,8 +244,10 @@
         android:layout_marginTop="4dp"
         android:gravity="center"
         android:text="Other +919560696139"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/callernameend" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
